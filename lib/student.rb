@@ -9,6 +9,10 @@ class Student
     @id = id
   end
   
+  def self.all
+    @@all
+  end
+  
   def self.create_table
     sql = <<- SQL
       CREATE TABLE IF NOT EXITS students (
@@ -39,6 +43,6 @@ class Student
   end
   
   def self.create(name = "", grade = "")
-    
+    self.new(name, grade)
   end
 end
