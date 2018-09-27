@@ -25,7 +25,7 @@ class Student
   end
   
   def self.drop_table
-    sql = <<- SQL
+    sql = <<-SQL
       DROP TABLE IF NOT EXITS students;
     SQL
     
@@ -33,9 +33,9 @@ class Student
   end
 
   def save
-    sql = <<- SQL
+    sql = <<-SQL
       "INSERT INTO students (name, grade)
-      VALUE (?, ?)", name, grade, id)
+        VALUE (?, ?), name, grade, id)
     SQL
     
     DB[:conn].execute(sql)
