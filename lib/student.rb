@@ -34,8 +34,9 @@ class Student
       "INSERT INTO students (name, grade)
       VALUE (?, ?)", name, grade, id);
     SQL
-    @id = id
+    
     DB[:conn].execute(sql)
+    @id = id
   end
   
 end
