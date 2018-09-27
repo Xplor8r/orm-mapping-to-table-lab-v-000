@@ -39,7 +39,7 @@ class Student
     SQL
     
     DB[:conn].execute(sql)
-    @id =
+    @id = D
   end
   
   def self.create(name = "", grade = "")
