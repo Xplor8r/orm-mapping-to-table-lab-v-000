@@ -39,7 +39,7 @@ class Student
     SQL
     
     DB[:conn].execute(sql)
-    @id = DB[:conn].execute("SELECT  ")
+    @id = DB[:conn].execute("SELECT * FROM students ORDER BY id DESC LIMIT 1")
   end
   
   def self.create(name = "", grade = "")
