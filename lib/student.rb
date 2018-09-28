@@ -44,6 +44,7 @@ class Student
   
   def self.create(name = nil, grade = nil)
     name = DB[:conn].execute("SELECT name FROM students "
+    grade = DB[:conn].execute("SELECT gr FROM students "
     self.new(name, grade)
   end
 end
