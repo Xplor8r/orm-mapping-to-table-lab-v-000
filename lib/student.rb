@@ -43,8 +43,8 @@ class Student
   end
   
   def self.create(name = nil, grade = nil)
-    name = DB[:conn].execute("SELECT name FROM students "
-    grade = DB[:conn].execute("SELECT gr FROM students "
+    name = DB[:conn].execute("SELECT name FROM students ").flatten
+    grade = DB[:conn].execute("SELECT grade FROM students ").flatten
     self.new(name, grade)
   end
 end
